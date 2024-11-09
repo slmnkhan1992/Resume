@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Resume</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Input Form -->
+    <div id="form-container">
+        <h2>Fill Your Resume Details</h2>
+        
+        <label>Name: <input type="text" id="nameInput"></label><br>
+        <label>Job Title: <input type="text" id="jobTitleInput"></label><br>
+        <label>Address: <input type="text" id="addressInput"></label><br>
+        <label>Phone: <input type="text" id="phoneInput"></label><br>
+        <label>Email: <input type="email" id="emailInput"></label><br>
+        
+        <h3>Career Objective</h3>
+        <textarea id="objectiveInput"></textarea><br>
+
+        <h3>Educational Background</h3>
+        <div id="educationContainer">
+            <div class="education-entry">
+                <label>Degree: <input type="text" class="degree"></label><br>
+                <label>Institution: <input type="text" class="institution"></label><br>
+                <label>Year of Graduation: <input type="text" class="gradYear"></label><br>
+            </div>
+        </div>
+        <button onclick="addEducation()">Add More Education</button>
+
+        <h3>Work Experience</h3>
+        <div id="experienceContainer">
+            <div class="experience-entry">
+                <label>Company: <input type="text" class="company"></label><br>
+                <label>Position: <input type="text" class="position"></label><br>
+                <label>Duration: <input type="text" class="duration"></label><br>
+            </div>
+        </div>
+        <button onclick="addExperience()">Add More Experience</button>
+
+        <br><br>
+        <h3>Skills</h3>
+        <textarea id="skillsInput"></textarea><br>
+        <textarea id="skillsInput"></textarea><br>
+        <textarea id="skillsInput"></textarea><br>
+
+        <br><br>
+        <h3>Personal Information</h3>
+        <br>
+        <label>Father's Name: <input type="text" id="fatherNameInput"></label><br>
+        <label>Date of Birth: <input type="date" id="dobInput"></label><br>
+        <label>Religion: <input type="text" id="religionInput"></label><br>
+        <label>Marital Status: <input type="text" id="maritalStatusInput"></label><br>
+        <label>Nationality: <input type="text" id="nationalityInput"></label><br>
+        
+        <button onclick="generateResume()">Generate Resume</button>
+    </div>
+
+    <!-- Resume Display -->
+    <div id="main-container" style="display: none;">
+        <header id="header">
+            <div id="imageArea">
+                <img src="https://e7.pngegg.com/pngimages/154/139/png-clipart-man-computer-icons-avatar-man-child-face-thumbnail.png" alt="">
+            </div>
+
+            <div id="headerContent">
+                <h1 id="displayName">MUHAMMAD SALMAN</h1>
+                <h4 id="displayJobTitle">Web & App Developer</h4>
+                <p><b>Address:</b> <span id="displayAddress">H # 1726/23, Porbandar Colony, Baldia Town, Karachi.</span></p>
+                <p><b>Cell:</b> <span id="displayPhone">0313-2556275</span></p>
+                <p><b>Email:</b> <span id="displayEmail">slmnkhan2050@gnail.com</span></p>
+            </div>
+        </header>
+
+        <div id="material">
+            <div id="rightSide">
+                <h2>Career Objective</h2>
+                <p id="displayObjective">To enhance my existing skills...</p>
+
+                <h2>Educational Background</h2>
+                <ul id="displayEducation"></ul>
+
+                <h2>Working Experience</h2>
+                <ul id="displayExperience"></ul>
+            </div>
+
+            <div id="leftSide">
+                <h2>Skills</h2>
+                <ul id="displaySkills"></ul>
+
+                <h2>Personal Information</h2>
+                <p><b>Father's Name:</b> <span id="displayFatherName"></span></p>
+                <p><b>Date of Birth:</b> <span id="displayDOB"></span></p>
+                <p><b>Religion:</b> <span id="displayReligion"></span></p>
+                <p><b>Marital Status:</b> <span id="displayMaritalStatus"></span></p>
+                <p><b>Nationality:</b> <span id="displayNationality"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+/* Reset some default styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* General Layout */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f3f4f6;
+}
+
+#form-container,
+#main-container {
+    width: 80%;
+    max-width: 600px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+h2, h3, h4 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Form Styling */
+#form-container label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #444;
+}
+
+#form-container input[type="text"],
+#form-container input[type="email"],
+#form-container input[type="date"],
+#form-container textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    resize: none;
+}
+
+#form-container button {
+    margin-top: 15px;
+    padding: 10px;
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#form-container button:hover {
+    background-color: #45a049;
+}
+
+/* Resume Styling */
+#header {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+#imageArea img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+#headerContent h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+#headerContent h4 {
+    font-size: 18px;
+    color: #777;
+    margin: 5px 0;
+}
+
+#headerContent p {
+    font-size: 14px;
+    color: #555;
+}
+
+#material {
+    display: flex;
+    gap: 20px;
+}
+
+/* Right and Left Sides */
+#rightSide,
+#leftSide {
+    flex: 1;
+}
+
+#rightSide h2,
+#leftSide h2 {
+    font-size: 18px;
+    color: #4CAF50;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+#rightSide p,
+#leftSide p {
+    font-size: 14px;
+    color: #444;
+    line-height: 1.5;
+    margin: 5px 0;
+}
+
+#rightSide ul,
+#leftSide ul {
+    list-style: none;
+    padding: 0;
+}
+
+#rightSide ul li,
+#leftSide ul li {
+    background: #f9f9f9;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #material {
+        flex-direction: column;
+    }
+}
